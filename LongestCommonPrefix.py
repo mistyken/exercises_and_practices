@@ -12,8 +12,7 @@ class Solution(object):
             char = strs[0][i]
             for j in range(1, len(strs)):
                 if i == len(strs[j]) or strs[j][i] != char:
-                    holder = strs[0]
-                    return holder[0, i]
+                    return strs[0][0: i]
 
         return strs[0]
 

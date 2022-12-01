@@ -13,4 +13,16 @@ def funWithAnagrams(text: list):
             mem = [sorted(w) for w in result]
     return sorted(result)
 
-print(funWithAnagrams(text))
+
+def funWithAnagram2(text: list):
+    keys = set(["".join(sorted(w)) for w in text])
+
+    result = []
+    for k in list(keys):
+        for w in text:
+            if k == "".join(sorted(w)):
+                result.append(w)
+                break
+    return sorted(result)
+
+print(funWithAnagram2(text))

@@ -36,4 +36,4 @@ def nest(s):
 
     return result
 
-print(26 // 5)
+print(nest("[]}"))
